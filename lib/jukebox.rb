@@ -29,19 +29,19 @@ new_list
 end
 
 def play(songs)
-songs = list(songs)
-puts "Please enter a song name or number:"
-song_choice = gets.chomp.downcase
+  songs = list(songs)
+  puts "Please enter a song name or number:"
+  song_choice = gets.chomp.downcase
 
-if songs.any? { |song| song.downcase.include?(song_choice)} == true
-  songs.each do |song|
-    if song.downcase.include?(song_choice)
-      puts "Playing #{song}"
+  if songs.any? { |song| song.downcase.include?(song_choice)} == true
+    songs.each do |song|
+      if song.downcase.include?(song_choice)
+        puts "Playing #{song}"
+      end
     end
+  else songs.any? { |song| song.downcase.include?(song_choice) } == false
+    puts "Invalid input, please try again"
   end
-else songs.any? { |song| song.downcase.include?(song_choice) } == false
-  puts "Invalid input, please try again"
-end
 end
 
 def exit_jukebox
