@@ -50,4 +50,5 @@ end
 
 def run
   help
+  puts "Please enter a command:"
 end 
