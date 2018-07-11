@@ -19,13 +19,13 @@ def help
 end
 
 def list (songs)
-new_list = []
-  songs.each_with_index do |song, index|
-    new_list.push("#{index+1}. #{song}")
-  end
+  new_list = []
+    songs.each_with_index do |song, index|
+      new_list.push("#{index+1}. #{song}")
+    end
   
-puts new_list
-new_list
+  puts new_list
+  new_list
 end
 
 def play(songs)
